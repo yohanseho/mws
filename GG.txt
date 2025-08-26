@@ -1,0 +1,9 @@
+https://github.com/sharkdesmond12-source/huhu
+# Check current remote
+git remote -v
+
+# Change the remote URL to your new repository
+git remote set-url origin https://github.com/shark/new-repo.git
+
+# Push to the new repository
+git push -u origin main

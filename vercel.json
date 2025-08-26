@@ -1,0 +1,26 @@
+{
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/static/(.*)",
+      "destination": "/static/$1"
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "/api/favicon.ico"
+    },
+    {
+      "source": "/favicon.png", 
+      "destination": "/api/favicon.ico"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.py"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+/* Custom styles for EVM Multi Sender */
+
+.wallet-list {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+}
+
+.wallet-item {
+    padding: 0.375rem;
+    margin-bottom: 0.125rem;
+    background-color: var(--bs-dark);
+    border-radius: 0.25rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    word-break: break-all;
+}
+
+.balance-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+    background-color: var(--bs-dark);
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.balance-address {
+    font-family: 'Courier New', monospace;
+    color: var(--bs-info);
+    margin-right: 1rem;
+    word-break: break-all;
+    flex: 1;
+}
+
+.balance-amount {
+    color: var(--bs-success);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.result-item {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--bs-border-color);
+}
+
+.result-success {
+    background-color: rgba(25, 135, 84, 0.1);
+    border-color: var(--bs-success);
+}
+
+.result-failed {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-color: var(--bs-danger);
+}
+
+.result-wallet {
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    color: var(--bs-info);
+    word-break: break-all;
+    margin-bottom: 0.75rem;
+}
+
+.result-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.result-status {
+    font-weight: bold;
+}
+
+.result-status.success {
+    color: var(--bs-success);
+}
+
+.result-status.failed {
+    color: var(--bs-danger);
+}
+
+.result-amount {
+    color: var(--bs-warning);
+    font-weight: bold;
+}
+
+.tx-hash-link {
+    color: var(--bs-primary);
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+}
+
+.tx-hash-link:hover {
+    text-decoration: underline;
+}
+
+.error-text {
+    color: var(--bs-danger);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wallet-item,
+    .balance-item {
+        font-size: 0.75rem;
+    }
+    
+    .result-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .btn-group .btn {
+        font-size: 0.875rem;
+        padding: 0.375rem 0.5rem;
+    }
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Custom button styles */
+.btn-group .btn-check:checked + .btn {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+/* Table styles for results */
+.results-table {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.results-table th {
+    background-color: var(--bs-dark);
+    border-bottom: 2px solid var(--bs-border-color);
+    padding: 0.75rem;
+    font-weight: bold;
+}
+
+.results-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--bs-border-color);
+    vertical-align: middle;
+}
+
+.results-table .wallet-cell {
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    word-break: break-all;
+    max-width: 200px;
+}
+
+/* Utility classes */
+.text-truncate-address {
+    font-family: 'Courier New', monospace;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-success {
+    background-color: var(--bs-success);
+    color: white;
+}
+
+.status-failed {
+    background-color: var(--bs-danger);
+    color: white;
+}
+
+/* Animation for loading */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.loading-pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+}

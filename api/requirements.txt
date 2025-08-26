@@ -1,0 +1,13 @@
+aiohttp>=3.12.15
+email-validator>=2.2.0
+flask>=3.1.2
+flask-login>=0.6.3
+flask-sqlalchemy>=3.1.1
+oauthlib>=3.3.1
+psycopg2-binary>=2.9.10
+pyjwt>=2.10.1
+requests>=2.32.5
+sendgrid>=6.12.4
+sqlalchemy>=2.0.43
+web3>=7.13.0
+werkzeug>=3.1.3
